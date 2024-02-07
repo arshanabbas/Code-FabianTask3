@@ -42,9 +42,9 @@ matches = matcher.match(queryDescriptors,trainDescriptors)
 # and outputs the matched query image with 
 # its train image 
 final_img = cv2.drawMatches(query_img, queryKeypoints,  
-train_img, trainKeypoints, matches[:20],None) 
+train_img, trainKeypoints, matches[:50],None) 
    
-final_img = cv2.resize(final_img, (1000,650)) 
+#final_img = cv2.resize(final_img, (1000,650)) 
   
 # Save the registered image
-cv.imwrite("R:/Arshan Abbas/Image_overlay/Images/registered_image5.jpg", final_img)
+cv2.imwrite("R:/Arshan Abbas/Image_overlay/Images/registered_image6.jpg", final_img)

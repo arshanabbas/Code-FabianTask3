@@ -46,6 +46,5 @@ train_img, trainKeypoints, matches[:20],None)
    
 final_img = cv2.resize(final_img, (1000,650)) 
   
-# Show the final image 
-cv2.imshow("Matches", final_img) 
-cv2.waitKey(3000) 
+# Save the registered image
+cv.imwrite("R:/Arshan Abbas/Image_overlay/Images/registered_image5.jpg", final_img)

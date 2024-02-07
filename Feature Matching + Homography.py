@@ -8,7 +8,7 @@ Created on Wed Feb  7 10:57:36 2024
 import numpy as np
 import cv2 as cv
 from matplotlib import pyplot as plt
-MIN_MATCH_COUNT = 10
+MIN_MATCH_COUNT = 150
 img1 = cv.imread("R:/Arshan Abbas/Image_overlay/Images/W4-1-S1-Kalling2-NEU.jpg", cv.IMREAD_GRAYSCALE)          # queryImage
 img2 = cv.imread("R:/Arshan Abbas/Image_overlay/Images/W4-1-S1-NEU.jpg", cv.IMREAD_GRAYSCALE) # trainImage
 

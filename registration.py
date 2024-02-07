@@ -1,11 +1,10 @@
-pip install opencv-python
-
 import cv2
 import numpy as np
 
 # Load the reference and target images
-reference_image = cv2.imread(‘reference_image.jpg’, cv2.IMREAD_GRAYSCALE)
-target_image = cv2.imread(‘target_image.jpg’, cv2.IMREAD_GRAYSCALE)
+reference_image = cv2.imread("R:/Arshan Abbas/Image_overlay/Images/W4-1-S1-NEU.jpg", cv2.IMREAD_GRAYSCALE)
+target_image = cv2.imread("R:/Arshan Abbas/Image_overlay/Images/W4-1-S1-Kalling2-NEU.jpg", cv2.IMREAD_GRAYSCALE)
+#3 "R:/Arshan Abbas/Image_overlay/Images/W4-1-S1-Kalling2-NEU.jpg" "R:/Arshan Abbas/Image_overlay/Images/W4-1-S1-NEU.jpg"
 
 # Find keypoints and descriptors using ORB (you can use other methods like SIFT, SURF, etc.)
 orb = cv2.ORB_create()
@@ -22,7 +21,7 @@ matches = bf.match(des1, des2)
 matches = sorted(matches, key=lambda x: x.distance)
 
 # Keep only the best N matches
-N = 50
+N = 10
 matches = matches[:N]
 
 # Extract matched keypoints
@@ -36,9 +35,9 @@ M, mask = cv2.findHomography(src_pts, dst_pts, cv2.RANSAC, 5.0)
 registered_image = cv2.warpPerspective(target_image, M, (reference_image.shape[1], reference_image.shape[0]))
 
 # Save the registered image
-cv2.imwrite(‘registered_image.jpg’, registered_image)
+cv2.imwrite("R:/Arshan Abbas/Image_overlay/Images/registered_image3.jpg", registered_image)
 
 # Display the registered image
-cv2.imshow(‘Registered Image’, registered_image)
+#cv2.imshow(‘Registered Image’, registered_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

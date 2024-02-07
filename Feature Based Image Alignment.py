@@ -9,14 +9,14 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-refFilename = ""
+refFilename = "R:/Arshan Abbas/Image_overlay/Images/W4-1-S1-Kalling2-NEU.jpg"
 print("Reading:", refFilename)
 im1 = cv2.imread(refFilename, cv2.IMREAD_COLOR)
 im1 = cv2.cvtColor(im1, cv2.COLOR_BGR2RGB)
 
 #Read image to be aligned
-imFilename = ""
-print("Reading img 2 :", refFilename)
+imFilename = "R:/Arshan Abbas/Image_overlay/Images/W4-1-S1-NEU.jpg"
+print("Reading img 2:", refFilename)
 im2 = cv2.imread(imFilename, cv2.IMREAD_COLOR)
 im2 = cv2.cvtColor(im2, cv2.COLOR_BGR2RBG)
 

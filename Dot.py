@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Load the image
-image = cv2.imread('G:/F/Work/TIME/Script/Code-Fabian3/1.jpg')
+image = cv2.imread('1.jpg')
 
 # Define the position for the red dot
 x_pos1, y_pos1 = 2097, 2000  

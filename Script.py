@@ -43,7 +43,7 @@ coordinates = [coord for coord in coordinates if coord is not None]
 
 for coord in coordinates:
     x, y = coord
-    cv2.circle(image, (x, y), radius=3, color=(255, 0, 0), thickness=-1)
+    cv2.circle(image, (x, y), radius=7, color=(255, 0, 0), thickness=-1)
     
 cv2.imwrite("Image&dots.jpg", image)
 

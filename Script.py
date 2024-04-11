@@ -41,6 +41,12 @@ print(first_values) #print 1
 #select only values which are not None
 coordinates = [coord for coord in coordinates if coord is not None]
 
+for coord in coordinates:
+    x, y = coord
+    cv2.circle(image, (x, y), radius=3, color=(255, 0, 0), thickness=-1)
+    
+cv2.imwrite("Image&dots.jpg", image)
+
 num_first_values = len(first_values)
 print(num_first_values) #print 2
 

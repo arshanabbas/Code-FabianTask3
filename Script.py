@@ -36,21 +36,25 @@ for y, row in enumerate(selected_portion1):
         first_values.append(None)
         coordinates.append(None)
 
-print(first_values) #print 1 
+print("1:", first_values) #print 1 
 
 #select only values which are not None
 coordinates = [coord for coord in coordinates if coord is not None]
 
+"""
 for coord in coordinates:
     x, y = coord
-    cv2.circle(image, (x, y), radius=7, color=(255, 0, 0), thickness=-1)
+    cv2.circle(image, (x, y), radius=10, color=(255, 0, 0), thickness=10)"""
+    
+cv2.circle(image, (11093, 1073), radius=20, color=(255, 0, 0), thickness=2)
+#(coordinates[0][0], coordinates[0][1])
     
 cv2.imwrite("Image&dots.jpg", image)
 
 num_first_values = len(first_values)
-print(num_first_values) #print 2
+print("2:", num_first_values) #print 2
 
 num_coordinates_count = len(coordinates)
-print(num_coordinates_count) #print 3
+print("3:", num_coordinates_count) #print 3
 
-print(coordinates) #print 4
+print("4:", coordinates) #print 4

@@ -23,7 +23,8 @@ points2 = np.array(features_image2, dtype=np.float32)
 transformation_matrix, _ = cv2.findHomography(points1, points2)
 
 # Warp image1 to align with image2
-aligned_image1 = cv2.warpPerspective(image1, transformation_matrix, (image1.shape[1], image1.shape[0]))
+aligned_image1 = cv2.warpPerspective(image1, transformation_matrix, (image2.shape[1], image2.shape[0]))
 
 #results
 cv2.imwrite('wrappedIMG.jpg', aligned_image1)
+print(transformation_matrix)

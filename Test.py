@@ -25,7 +25,7 @@ transformation_matrix, _ = cv2.estimateAffine2D(points1, points2)
 # Warp image1 to align with image2
 aligned_image1 = cv2.warpAffine(image2, transformation_matrix, (image1.shape[1], image1.shape[0]))
 
-combined_image = cv2.addWeighted(image1, 0.1, aligned_image1, 0.1, 0.5)
+combined_image = cv2.addWeighted(image1, 0.6, aligned_image1, 0.6, 0)
 
 #results
 cv2.imwrite('wrappedIMG.jpg', combined_image)
